@@ -1,0 +1,13 @@
+2a
+The main problem I see when working with this table is its size. I would try to split the data into several smaller tables to speed up data retrieval.
+2b
+I was taught in the course that a better way to use varchar than char is because it uses less memory, so I would probably consider changing the char columns to varchar.
+2c
+An index is a collection of key-location values and can be compared to a table of contents in books. It is used to optimize database searches.
+When creating the index, consider how often we search by a given column, whether the columns follow the word WHERE, ORDER BY, GROUP BY, whether the columns are foreign keys or unique keys.
+Looking at frequently searched data, I would create indexes on the columns city, country, RV, price because it will be the most searched data.
+2d
+Foreign keys are columns used to connect between tables in a database. Their main purpose is to enforce referential integrity and improve performance because are automatically indexed.
+Foreign keys should not be used if the data types in the joining columns are not the same.
+I would use foreign keys in this case as I wrote in task 2a because the big problem is the size of the table. Breaking the table into several smaller ones would help optimize the search performance,
+but these tables need to be linked in some way, and a great way to do this is with foreign keys. Searching for data in smaller tables is faster, thanks to automatic indexing of foreign keys.
